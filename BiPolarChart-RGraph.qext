@@ -1,0 +1,11 @@
+{
+    "name" : "BiPolar Chart - RGraph",
+    "description" : "BiPolar bar chart allowing two arrays to be shown against a dimension. Uses the RGraph chart library",
+    "icon" : "bar-chart",
+    "type" : "visualization",
+    "version": "0.1",
+    "preview" : "bar-chart",
+    "author": "Richard Byard"
+}
+
+
