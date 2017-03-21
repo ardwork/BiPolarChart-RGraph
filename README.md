@@ -16,4 +16,5 @@ An interesting visualisation to compare two measures for values in a dimension. 
 <li>You can use this object once on a sheet, if multiple are used only the first will render.</li>
 <li>If you use this chart on multiple sheets with different measures (which you can) the chart settings appear to affect all versions in the application. Both charts work but only one set of color ect setting is possible.</li>
 <li>The scale is fixed for both axes so the values in both measures should be providing similar types of values.</li>
+<li>On click selection has been disabled in this version. This will be worked on.</li>
 </ul>
