@@ -151,32 +151,28 @@ define( [
 			}
 			
 			
-			
-			var html = '';
-			
-			var width = $element.width(), height = $element.height();
-			// add canvas for chart
-			html+='<div id="canvas-wrapper"><canvas id="cvs" width="'+width+'" height="'+height+'">[No canvas support]</canvas></div>';
-			
-			$element.html(html);
-			
-			
-			
-			
+			//To generate random numbers to allow multiple charts to present on one sheet:
+			function guid() {return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();};
+			function s4() {return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);};
+			var tmpCVSID = guid();
 						
-			/*try {
-				chart.Clear();
-			}
-			catch(err) {
-			}		
-			*/
-			RGraph.Reset(document.getElementById('cvs'));
+
+
+			var html = '';			
+			var width = $element.width(), height = $element.height();
+			// add canvas for chart			
+			html+='<div id="canvas-wrapper"><canvas id="' + tmpCVSID + '" width="'+width+'" height="'+height+'">[No canvas support]</canvas></div>';
+
+			$element.html(html);
+
 			
+			RGraph.Reset(document.getElementById(tmpCVSID));
+		
 						
 			
 			
 			chart = new RGraph.Bipolar({
-						id: 'cvs',
+						id: tmpCVSID,
 						left: leftArray,
 						right: rightArray,
 						options: {
