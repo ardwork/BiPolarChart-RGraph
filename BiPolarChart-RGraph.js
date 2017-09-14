@@ -1,8 +1,8 @@
 ////////////////////////////////////////////////////
-//Version: 	1.0
+//Version: 	1.1
 //Author:  	Richard Byard
-//Usage:	Bipilar bar chart using RGraph chart library.
-//Date:		18 March 2017
+//Usage:	Bipolar bar chart using RGraph chart library.
+//Date:		13 Sept 2017
 ////////////////////////////////////////////////////
 define( [
         // Load the properties.js file using requireJS
@@ -32,6 +32,10 @@ define( [
 			
 			//Define the data properties - how many rows and columns to load.
 			 initialProperties: initProps,
+			
+			//Allow export to print object 
+			support : { export: true 
+			},
 			
 			//Not sure if there are any other options available here.
 			 snapshot: {cantTakeSnapshot: true
